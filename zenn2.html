@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <h2>ボックス</h2>
+    <div class="flex">
+      <div class="red">あああああああああああああああああああああああああああああああああ</div>
+      <div class="blue">いいいいいいいいいいいいいいいいいいいいいいいいいいいいい</div>
+      <div class="yellow">ううううううううううう</div>
+    </div>
+    <div class="flex">
+      <div class="red">あああああああああああああああああああああああああああああああああ</div>
+      <div class="blue">いいいいいいいいいいいいいいいいいいいいいいいいいいいいい</div>
+      <div class="yellow">ううううううううううう</div>
+    </div>
+  </div>
+
+  <div class="container"> 
+    <h2>ボックス</h2>
+    <div class="grid">
+      <div class="red">あああああああああああああああああああああああああああああああああ</div>
+      <div class="blue">いいいいいいいいいいいいいいいいいいいいいいいいいいいいい</div>
+      <div class="yellow">ううううううううううう</div>
+    </div>
+  </div>
+
+  <section class="container">
+    <h2>縦並び</h2>
+  
+    <div class="flex-container">
+      <figure><img src="https://placehold.jp/150x150.png" alt="" class="r"></figure>
+      <p>あああああああああああああああああああああああああああああああああ</p>
+    </div>
+  
+    <div class="flex-container">
+      <figure><img src="https://placehold.jp/150x150.png" alt="" class="b"></figure>
+      <p>いいいいいいいいいいいいいいいいいいいいいいいいいいいいい</p>
+    </div>
+  
+    <div class="flex-container">
+      <figure><img src="https://placehold.jp/150x150.png" alt="" class="y"></figure>
+      <p>ううううううううううう</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2>横並び</h2>
+  
+    <div class="flex-container-2">
+      <div class="flex-item">
+        <figure><img src="https://placehold.jp/150x150.png" alt="" class="r"></figure>
+        <p>あああああああああああああああああああああああああああああああああ</p>
+      </div>
+    
+      <div class="flex-item">
+        <figure><img src="https://placehold.jp/150x150.png" alt="" class="b"></figure>
+        <p>いいいいいいいいいいいいいいいいいいいいいいいいいいいいい</p>
+      </div>
+    
+      <div class="flex-item">
+        <figure><img src="https://placehold.jp/150x150.png" alt="" class="y"></figure>
+        <p>ううううううううううう</p>
+      </div>
+    </div>
+  </section>
+  <style>
+    h2 {
+      border-bottom: 1px solid blue;
+    }
+    .container {
+      width: 800px;
+      margin: 0 auto;
+    }
+
+    .flex {
+      display: inline-flex;
+      justify-content: space-around ;
+      width: 300px;
+    }
+
+    .flex div {
+      width: 25%;
+      padding: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0.5em;
+      grid-template-areas: 
+        "Red Yellow"
+        "Blue Yellow";
+    }
+
+    .red {
+      background-color: pink;
+      grid-area: Red;
+    }
+    .blue {
+      background-color: aliceblue;
+      grid-area: Blue;
+    }
+    .yellow {
+      background-color: blanchedalmond;
+      grid-area: Yellow;
+    }
+
+    .r {
+      border: 2px solid red;
+    }
+
+    .b {
+      border: 2px solid blue;
+    }
+
+    .y {
+      border: 2px solid orange;
+    }
+
+    .flex-container {
+      border: 1px solid black;
+      display: flex;
+      gap: 1em;
+      margin-bottom: 1em;
+      align-items: center;
+    }
+
+    .flex-container-2 {
+      border: 1px solid black;
+      display: flex;
+      gap: 1em;
+    }
+
+    .flex-container-2 figure {
+      text-align: center;
+    }
+
+    .flex-item {
+      border: 1px dashed green;
+      flex: 1;
+    }
+
+
+  </style>
+</body>
+</html>

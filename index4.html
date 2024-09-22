@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flexbox</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="clearfix">
+        <!-- liがすべてfloatのため高さがなくなるので、疑似的にblockを追加する -->
+        <li><a href="#">ダッシュボード</a></li>
+        <li><a href="#">会員管理</a></li>
+        <li><a href="#">受注管理</a></li>
+        <li><a href="#">商品管理</a></li>
+        <li><a href="#">マスター管理</a></li>
+        <li><a href="#">ログイン情報</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>flexboxで横並び</h2>
+    </section>
+  </main>
+  <style>
+    header nav {
+      background-color: aliceblue;
+      padding: 15px;
+      margin: 0px;
+    }
+
+    header nav ul {
+      margin: 0px auto;
+      padding: 0px;
+      box-sizing: border-box;
+      width: 100%;
+      /* ここ重要 */
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    header nav li {
+      list-style: none;
+      background-color: turquoise;
+      text-align: center;
+      padding: 10px;
+      box-sizing: border-box;
+      /* ここ重要 */
+      margin: 2px;
+      flex: 1 0 140px;
+    }
+
+    header nav li a {
+      color: white;
+      text-decoration-line: none;
+    }
+
+    main section {
+      background-color: gainsboro;
+      padding: 15px;
+    }
+
+    main section h2 {
+      margin: 0px;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: block;
+      visibility: hidden;
+      clear: both;
+    }
+
+    nav ul {
+      border: 1px solid black;
+    }
+
+    @media screen and (min-width:960px) {
+      
+    }
+  </style>
+</body>
+</html>

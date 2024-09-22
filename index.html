@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>さん&nbsp;&nbsp;&nbsp;ぷる</h1>
+  <div>
+    <img src="https://placehold.jp/150x150.png" alt="">
+  </div>
+
+  <p>HTMLです</p>
+  <p><b>HTML</b>です</p>
+  <p><code>HTML</code>です</p>
+  <p><em>HTML</em>です</p>
+
+  <dl>
+    <dt>JP</dt>
+    <dd>日本を表す</dd>
+    <dt>US</dt>
+    <dd>アメリカを表す</dd>
+  </dl>
+
+  <fieldset>
+    <legend>情報</legend>
+    <input type="text">
+  </fieldset>
+  <section>
+    <h1>タイトル</h1>
+    <img src="https://placehold.jp/150x150.png" alt="">
+    <img src="https://placehold.jp/150x150.png" alt="">
+    <p>
+      あああああああああああああああああいいいいいいいいいいいいいいいいいうううううううううううううう
+    </p>
+  </section>
+  <div class="clearfix">
+    <img src="https://placehold.jp/150x150.png" alt="">
+    <img src="https://placehold.jp/150x150.png" alt="">
+  </div>
+  <p id="p3">
+    あああああああああああああああああいいいいいいいいいいいいいいいいいうううううううううううううう
+  </p>
+    
+  <style>
+    h1 {
+      border-bottom: 2px solid blue;
+    }
+
+    section {
+      background-color: bisque;
+      width: 320px;
+    }
+
+    section p {
+      width: 300px;
+      height: 100px;
+      overflow: visible;
+      clear: left;
+      background-color: azure;
+      border: 1px solid black;
+    }
+
+    section img {
+      float: left;
+      margin: 5px;
+    }
+
+    div {
+      background-color: cornflowerblue;
+      width: 320px;
+    }
+
+    #p3 {
+      width: 300px;
+      height: 100px;
+      overflow: visible;
+      background-color: azure;
+      border: 1px dashed black;
+      clear: left;
+    }
+
+    div img {
+      float: left;
+      margin: 5px;
+    }
+
+    #clearbox {
+      clear: both;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: block;
+      visibility: hidden;
+      clear: both;
+    }
+
+    div > img {
+      position: relative;
+      top: 100px;
+      left: 100px;
+    }
+  </style>
+  
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h3>ブロック要素</h3>
+  <div id="div1">
+    <div class="red">ボックスRed</div>
+    <div class="blue">ボックスBlue</div>
+    <div class="yellow">ボックスYellow</div>
+  </div>
+
+  <h3>インライン要素</h3>
+  <div id="div2">
+    ああああああああああああああああああ<span class="red">Redです。</span>
+  いいいいいいいいいいいいいいいいいい<span class="blue">Blueです。</span>
+  うううううううううううううううううう<span class="yellow">Yellowです。</span>
+  </div>
+  
+  <h3>インラインブロック要素</h3>
+  <div id="div3">
+    ああああああああああああああああああ<button class="red">ボックスRed</button>
+  いいいいいいいいいいいいいいいいいい<button class="blue">ボックスBlue</button>
+  <button class="yellow">ボックスYellow</button>
+  </div>
+
+
+  <style>
+    h3 {
+      border-bottom: 1px solid grey;
+    }
+    
+    div {
+      border: solid 1px green;
+      margin: 1rem;
+      padding: 1rem;
+    }
+
+    /* idがdiv1のdiv。その子要素のdiv。 */
+    div#div1 > div {
+      width: 200px;
+      /* 左右のマージンをautoにすると中央揃え */
+      margin: 1rem auto;
+    }
+
+    span {
+      border: solid 2px green;
+      margin: 1rem;
+      padding: 1rem;
+    }
+
+    button {
+      width: 150px;
+    }
+
+    .red {
+      background-color: pink;
+    }
+    .blue {
+      background-color: aliceblue;
+    }
+    .yellow {
+      background-color: blanchedalmond  ;
+    }
+
+    #div1, #div2, #div3 {
+      text-align: center;
+      width: 500px;
+    }
+
+
+  </style>
+</body>
+</html>

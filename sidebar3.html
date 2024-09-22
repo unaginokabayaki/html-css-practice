@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>サイドバーサンプル</title>
+</head>
+<body>
+  <div class="app">
+    <div class="header">ヘッダー</div>
+    <div class="main">
+      <div class="sidebar">
+        <ul>
+          <li>サイドバー1</li>
+          <li>サイドバー2</li>
+          <li>サイドバー3</li>
+          <li>サイドバー4</li>
+          <li>サイドバー5</li>
+          <li>サイドバー6</li>
+          <li>サイドバー7</li>
+          <li>サイドバー8</li>
+          <li>サイドバー9</li>
+          <li>サイドバー10</li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="flex-content">コンテンツ１</div>
+        <div class="fixed-content">コンテンツ2</div>
+      </div>
+    </div>
+  </div>
+  <style>
+    body {
+      margin: 8px;
+    }
+
+    .app {
+      height: calc(100vh - 16px);;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      height: 48px;
+      background-color: lightcyan;
+      border: 4px solid blue;
+      box-sizing: border-box;
+    }
+
+    .main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: row;
+      border: 4px solid green;
+      box-sizing: border-box;
+    }
+
+    .sidebar {
+      width: 12rem;
+      border: 1px solid black;
+      box-sizing: border-box;
+    }
+
+    ul {
+      box-sizing: border-box;
+      list-style: none;
+      padding: 0;
+      height: calc(100vh - 64px);
+      overflow-y: scroll;
+    }
+
+    li {
+      box-sizing: border-box;
+      padding: 1rem;
+      margin: 8px;
+      border: 2px solid orange;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .flex-content {
+      flex-grow: 1;
+      box-sizing: border-box;
+      background-color: aliceblue;
+    }
+
+    .fixed-content {
+      height: 64px;
+      box-sizing: border-box;
+      background-color: blanchedalmond;
+    }
+  </style>
+</body>
+</html>
